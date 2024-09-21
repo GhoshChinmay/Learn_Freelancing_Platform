@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | Client or Freelancer</title>
+    <link rel="stylesheet" href="option.css">
+</head>
+<script src="option.js"></script>
+<body>
+    <script>
+// Wait for the DOM to fully load before running the script
+document.addEventListener("DOMContentLoaded", function() {
+    // Select the elements for client and freelancer options and the join button
+    const clientOption = document.querySelector("#client");
+    const freelancerOption = document.querySelector("#freelancer");
+    const joinButton = document.querySelector(".join-button");
+
+    // Add event listeners to change the button text based on the selected option
+    clientOption.addEventListener("change", function() {
+        if (clientOption.checked) {
+            joinButton.textContent = "Join as a Client";
+            document.querySelector('.selected').classList.remove('selected');
+            clientOption.closest('.option').classList.add('selected');
+        }
+    });
+
+    freelancerOption.addEventListener("change", function() {
+        if (freelancerOption.checked) {
+            joinButton.textContent = "Join as a Student";
+            document.querySelector('.selected').classList.remove('selected');
+            freelancerOption.closest('.option').classList.add('selected');
+        }
+    });
+});
+    </script>
+    <div class="container">
+        <div class="logo">
+            <h1>WorkWithUs</h1>
+        </div>
+        <h2>Join as a Student or Educator</h2>
+        <div class="options">
+            <div class="option selected">
+                <input type="radio" id="client" name="role" checked>
+                <label for="client">
+                    <p>I'm a Educator, to make learning engaging.</p>
+                </label>
+            </div>
+            <div class="option">
+                <input type="radio" id="freelancer" name="role">
+                <label for="freelancer">
+                    <p>I'm a Student, looking for learning opportunities.</p>
+                </label>
+            </div>
+        </div>
+        <button onclick="location.href='sign.html'" class="join-button">Join as a Educator</button>
+        <div>
+        <p class="login-link">Already have an account? <a href="Login.html">Log In</a></p>
+    </div>
+</body>
+</html>

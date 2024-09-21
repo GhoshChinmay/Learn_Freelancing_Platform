@@ -1,0 +1,186 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color:#f8c617;
+}
+
+/* Navigation Bar */
+.navbar {
+    background: #252c37;
+    border-bottom: 1px solid black;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: #f8c617;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    color: #f8c617;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .navigation a {
+    color: #f8c617;
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+
+.btn{
+    background-color:#f8c617; 
+    font-size: medium;
+    padding: 5px;
+    margin-left: 1rem;
+    width: 60px;
+    border-radius: 5px;
+    
+}
+
+
+.navbar .search-bar {
+    background: #252c37;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 1.5rem;
+    width: 300px;
+}
+
+/* Hero Section
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0;
+
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 1rem;
+    color: #252c37;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #252c37;
+}
+
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+} */
+.hero{
+    min-height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-left: 30px;
+   
+   
+    width: 800px;
+}
+.hero h1{
+    font-size: 50px;
+}
+/*About Us Section */
+.about {
+    padding: 60px 0;
+    text-align: center;
+   
+}
+
+.about{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.heading{
+    font-size: xx-large;
+    margin-right: 20px;
+}
+.search{
+    width: 400px;
+}
+
+/* Trusted By Section */
+.trusted {
+    margin-top: 2rem;
+}
+
+.trusted p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.trusted img {
+    max-width: 100px;
+    margin-right: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #f4f4f4;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 4rem;
+}
+p{
+    font-size: 1.2rem;
+    color: #252c37;
+}
+.H2{
+    color: #252c37;
+    font-size: 30px;
+}
+
+.button{
+    padding: 10px;
+    margin: 4px 4px;
+    background-color:#252c37;
+    text-align: center;
+}
+.search{
+    padding: 7px;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.search:hover{
+    text-transform: uppercase;
+  
+}

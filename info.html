@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details Form</title>
+    <link rel="stylesheet" href="./info.css">
+</head>
+
+<body>
+   
+        <script>
+            // Basic form validation
+            function validateForm() {
+                const name = document.getElementById("name").value;
+                const dob = document.getElementById("dob").value;
+    
+                if (name === "" || dob === "") {
+                    alert("Please fill in the required fields.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </head>
+    
+    <body>
+        <div class="form-container">
+            <h1>PROFILE</h1>
+            <form onsubmit="return validateForm()">
+                <!-- Personal Information Section -->
+                <div class="form-up">
+                    <h1 class="headup">Personal Information</h1>
+                    <div class="form-block">
+                        <div class="input-box">
+                            <label for="name">Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="dob">Date of Birth <span class="required">*</span></label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="City">City</label>
+                            <input type="text" id="City" name="City" placeholder="Enter your City">
+                        </div>
+                        <div class="input-box">
+                            <label for="language">Language</label>
+                            <input type="text" id="language" name="language" placeholder="Enter your language">
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Education Section -->
+                <div class="form-up">
+                    <h1 class="headup">Education</h1>
+                    <div class="form-block">
+                        <div class="input-box">
+                            <label for="pro">Profession</label>
+                            <input type="text" id="pro" name="pro" placeholder="Enter your profession" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="skill">Skill</label>
+                            <input type="text" id="skill" name="skill" placeholder="Enter your skill" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="strong">Strong</label>
+                            <input type="text" id="strong" name="strong" placeholder="Subjects you are strong in">
+                        </div>
+                        <div class="input-box">
+                            <label for="weak">Weak</label>
+                            <input type="text" id="weak" name="weak" placeholder="Subjects you are weak in">
+                        </div>
+                    </div>
+                </div>
+    
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+    
+    </html>
+    </div>
+
+
+</body>
+
+</html>

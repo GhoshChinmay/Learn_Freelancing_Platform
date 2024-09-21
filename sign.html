@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sign.css">
+</head>
+<body>
+    <script>
+        // Get the form and the submit button
+       const form = document.getElementById('signupForm');
+       const signupBtn = document.getElementById('signupBtn');
+
+       // Function to check if all inputs are filled
+       function checkInputs() {
+           const inputs = form.querySelectorAll('input[required]');
+           let allFilled = true;
+
+           // Loop through all required inputs
+           inputs.forEach(input => {
+               if (!input.value.trim()) {
+                   allFilled = false;
+               }
+           });
+
+           // Enable or disable the submit button based on input values
+           signupBtn.disabled = !allFilled;
+       }
+
+       // Add an event listener to check inputs on input changes
+       form.addEventListener('input', checkInputs);
+
+       // Optionally, prevent form submission to see the button behavior
+       form.addEventListener('submit', function(event) {
+           if (signupBtn.disabled) {
+               event.preventDefault();  // Prevent the form from being submitted
+           }
+       });
+
+
+        
+// Add event listeners to check inputs on change
+form.addEventListener('input', checkInputs);
+   
+// Get the modal
+var modal = document.getElementById("popupModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("signupBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+   modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+   modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+   if (event.target == modal) {
+       modal.style.display = "none";
+   }
+}
+ </script>
+
+
+
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="#" method="POST" id="signupForm">
+            <label for="firstName" class="label1">First Name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+
+            <label for="lastName" class="label2">Last Name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+
+            <label for="email" class="label3">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password" class="label4">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <button id="signupBtn" class="btn" type="submit" onclick="window.location.href='info.html'">SingUp</button>
+            <p>Already have an account? <a href="login.html">Log In</a></p>
+
+            <div id="popupModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Success!</h2>
+                    <p>You have successfully signed up.</p>
+                </div>
+        </form>
+    </div>
+   
+
+</body>
+</html>
